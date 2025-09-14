@@ -1,0 +1,273 @@
+/* TodoItem CSS Module */
+.container {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.2s;
+  transform: translateY(0);
+}
+
+.container:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.containerSelected {
+  ring: 2px;
+  ring-color: #3b82f6;
+  border-color: #93c5fd;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.containerCompleted {
+  opacity: 0.75;
+}
+
+.containerDragging {
+  z-index: 50;
+  transform: rotate(3deg) scale(1.05);
+}
+
+.itemContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkbox {
+  margin-top: 0.25rem;
+  height: 1rem;
+  width: 1rem;
+  border-color: #d1d5db;
+  border-radius: 0.25rem;
+}
+
+.selectionCheckbox {
+  color: #2563eb;
+}
+
+.selectionCheckbox:focus {
+  ring: 2px;
+  ring-color: #3b82f6;
+}
+
+.completionCheckbox {
+  color: #16a34a;
+}
+
+.completionCheckbox:focus {
+  ring: 2px;
+  ring-color: #16a34a;
+}
+
+.dragHandle {
+  margin-top: 0.25rem;
+  cursor: grab;
+  color: #9ca3af;
+  transition: color 0.2s;
+}
+
+.dragHandle:hover {
+  color: #6b7280;
+}
+
+.dragHandle:active {
+  cursor: grabbing;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.editInput {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.editInput:focus {
+  ring: 2px;
+  ring-color: #3b82f6;
+  border-color: transparent;
+}
+
+.editSelects {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editSelect {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.editSelect:focus {
+  ring: 2px;
+  ring-color: #3b82f6;
+  border-color: transparent;
+}
+
+.editButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editButton {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  color: white;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.saveButton {
+  background: #16a34a;
+}
+
+.saveButton:hover {
+  background: #15803d;
+}
+
+.cancelButton {
+  background: #6b7280;
+}
+
+.cancelButton:hover {
+  background: #4b5563;
+}
+
+.viewContent {
+  /* Default view content styles */
+}
+
+.textRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.text {
+  color: #111827;
+}
+
+.textCompleted {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.actionButton {
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.editActionButton:hover {
+  color: #2563eb;
+}
+
+.deleteActionButton:hover {
+  color: #dc2626;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+}
+
+.categoryTag {
+  /* Base category tag styles */
+}
+
+.categoryWork {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.categoryPersonal {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.categoryShopping {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.categoryHealth {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.categoryDefault {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.priorityTag {
+  border: 1px solid;
+}
+
+.priorityHigh {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.priorityMedium {
+  background: #fffbeb;
+  color: #92400e;
+  border-color: #fed7aa;
+}
+
+.priorityLow {
+  background: #f0fdf4;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #6b7280;
+}

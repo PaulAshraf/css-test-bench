@@ -1,0 +1,82 @@
+/* TodoExportImport CSS Module */
+.container {
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.buttonRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .buttonRow {
+    flex-direction: row;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.exportButton {
+  background: #2563eb;
+}
+
+.exportButton:hover {
+  background: #1d4ed8;
+}
+
+.exportButton:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.importButton {
+  background: #16a34a;
+}
+
+.importButton:hover {
+  background: #15803d;
+}
+
+.buttonIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.infoText {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.infoText p {
+  margin-bottom: 0.25rem;
+}
+
+.infoText p:last-child {
+  margin-bottom: 0;
+}
